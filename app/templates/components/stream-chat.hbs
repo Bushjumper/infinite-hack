@@ -1,0 +1,11 @@
+Total comments: {{comments.length}}
+Start: {{start}}
+End: {{end}}
+
+<div id="scrollable" style="width:300px; height:300px; overflow-y:scroll; border: 1px solid black;">
+  {{#each viewable as |comment|}}
+    <div style="">{{comment.body}}</div>
+  {{/each}}
+</div>
+<div {{action "viewEarlier"}}>View earlier</div>
+<div {{action "viewLater"}}>View later</div>
